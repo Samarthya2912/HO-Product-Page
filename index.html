@@ -106,6 +106,12 @@
             padding: 20px 5vw;
             border-radius: 5px;
             margin: 10px;
+            min-width: 150px;
+            text-align: center;
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .benefits-list {
@@ -113,6 +119,40 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
+        }
+
+        .how-to-use-body {
+            display: flex;
+            flex-direction: row;
+            padding: 20px 0;
+            justify-content: space-between;
+            width: 80vw;
+        }
+        
+        .how-to-use-box {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            padding: 2vw;
+            background-color: beige;
+            width: 10vw;
+            border-radius: 7px;
+            margin: 0 10px;
+        }
+        
+        .how-to-use-index {
+            position: absolute;
+            border: solid black 1px;
+            background-color: white;
+            border-radius: 2px;
+            padding: 2px 7px;
+            top: 0;
+            left: 0;
+        }
+
+        .how-to-use-steps {
+            display: flex;
         }
     </style>
     
@@ -191,37 +231,58 @@
     <!-- benefits -->
     <div class="wrapper benefits-wrapper">
         <div class="wrapper_toggle_button">
-            <span style="font-size: large;">Description</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span style="font-size: large;">Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body wrapper-body-closed">
             <div class="benefits-list">
                 <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium quibusdam cumque omnis unde aperiam nulla natus!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium. 
+
                 </div>
                 <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium quibusdam cumque omnis unde aperiam nulla natus!
-                </div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt.                </div>
                 <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium quibusdam cumque omnis unde aperiam nulla natus!
-                </div>
-                <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium quibusdam cumque omnis unde aperiam nulla natus!
-                </div>
-                <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium quibusdam cumque omnis unde aperiam nulla natus!
-                </div>
-                <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium quibusdam cumque omnis unde aperiam nulla natus!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium. Lorem ipsum dolor sit amet.
                 </div>
             </div>
         </div>
-    <!--  -->
+    </div>
+    <!-- /benefits -->
     
+    <!-- how to use -->
+    <div class="wrapper full how-to-use-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">How to use?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed">
+            <div class="how-to-use-body">
+                <iframe width="380" height="230" src="https://www.youtube.com/embed/nMSQ1yoPT2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="how-to-use-steps">
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">1</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0055/7855/5503/files/Icons_Fold-05.svg?v=1633956413" alt="">
+                        <p>Fold the cup</p>
+                    </div>
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">2</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0055/7855/5503/files/Icons_Insert-06.svg?v=1633956413" alt="">
+                        <p>Insert it</p>
+                    </div>
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">3</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0055/7855/5503/files/Icons_Relax.svg?v=1633956413" alt="">
+                        <p>Relax for 10 to 12 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /how to use -->
+
     <script>
         const buttons = document.querySelectorAll(".wrapper");
         buttons.forEach(element => {
             element.addEventListener("click", () => {
-                console.log('clicked');
                 element.classList.toggle("full");
             })
         });
