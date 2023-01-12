@@ -10,7 +10,6 @@
 <body>
     <style>
         .wrapper {
-            /* margin: 20px 0; */
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             max-width: 95vw;
         }
@@ -50,7 +49,7 @@
         }
 
         .wrapper.full > .wrapper-body {
-            max-height: 1000px;
+            max-height: 1500px;
             transition: max-height 0.4s ease-in-out;
         }
 
@@ -166,6 +165,57 @@
         .wrapper.full .faq-answer {
             padding: 10px 20px;
         }
+
+        @media screen and (max-width: 540px) {
+            .description-wrapper .wrapper-body {
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+            }    
+
+            .description-wrapper .wrapper-body img {
+                width: 80vw;
+            }
+
+            .ingredients-table-row {
+                flex-direction: column;
+            }
+            
+            .ingredient-box {
+                margin: 0;
+                width: 90vw;
+            }
+
+            .ingredient-box img {
+                width: 20vw;
+            }
+
+            .benefit-box {
+                width: 80vw;
+            }
+
+            .how-to-use-body {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .how-to-use-body iframe {
+                width: 90vw;
+                /* height: 150px; */
+            }
+
+            .how-to-use-steps {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .how-to-use-box {
+                width: 50vw;
+            }
+        }
     </style>
     
     <!-- description -->
@@ -177,10 +227,9 @@
         <div class="wrapper-body wrapper-body-closed">
             <img class="wrapper-image" src="https://cdn.shopify.com/s/files/1/0055/7855/5503/files/avpl_with_aloe_1.png?v=1658747422" alt="image">
             <ul class="wrapper-point_list">
-                <li>Do you ever notice white discharge in your panties sometimes? Especially right before the beginning of the period. With an extra cottony-soft surface and a curvy design for your extra comfort, Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
-                <li>Do you ever notice white discharge in your panties sometimes? Especially right before the beginning of the period. With an extra cottony-soft surface and a curvy design for your extra comfort, Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
-                <li>Do you ever notice white discharge in your panties sometimes? Especially right before the beginning of the period. With an extra cottony-soft surface and a curvy design for your extra comfort, Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
-                <li>Do you ever notice white discharge in your panties sometimes? Especially right before the beginning of the period. With an extra cottony-soft surface and a curvy design for your extra comfort, Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
+                <li>Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, obcaecati.</li>
+                <li>With an extra cottony-soft surface and a curvy design for your extra comfort, Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
             </ul>
         </div>
     </div>
@@ -293,6 +342,14 @@
 
     <!-- FAQs -->
     <h2 class="faqs">FAQs</h2>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">Some random question?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta neque voluptatibus repellendus optio ex deserunt quia esse voluptates perferendis doloremque.
+        </div>
+    </div>
     <div class="wrapper description-wrapper">
         <div class="wrapper_toggle_button">
             <span style="font-size: large;">Some random question?</span><p class="arrow-p"><i class="arrow up"></i></p>
