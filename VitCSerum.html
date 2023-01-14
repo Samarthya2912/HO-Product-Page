@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himalayan Organics</title>
+    
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        .wrapper {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            max-width: 95vw;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .wrapper-image {
+            width: 400px;
+        }
+
+        .wrapper-point_list {
+            list-style-type: square;
+        }
+        
+        .wrapper-point_list > * {
+            margin: 20px;
+        }
+        
+        .wrapper_toggle_button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+            background-color: blanchedalmond;
+            cursor: pointer;
+            background-color: #E6FFDD;
+            /* color: white; */
+        }
+
+        .wrapper > .wrapper-body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.4s ease-in-out;
+            transition: padding 0s;
+            overflow-y: hidden;
+        }
+
+        .wrapper.full > .wrapper-body {
+            max-height: 1500px;
+            transition: max-height 0.4s ease-in-out;
+        }
+
+        .wrapper .arrow-p {
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .wrapper.full .arrow-p {
+            transform: rotateZ(180deg);
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        .ingredient-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            text-align: justify;
+            margin: 0 60px;
+        }
+
+        .ingredient-box > img {
+            margin: 10px;
+            width: 100px;
+            border-radius: 50%;
+            /* overflow: hidden; */
+        }
+
+        .ingredient-table {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ingredients-table-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .benefit-box {
+            width: 20vw;
+            background-color: beige;
+            padding: 20px 5vw;
+            border-radius: 5px;
+            margin: 10px;
+            min-width: 150px;
+            text-align: center;
+            height: 15vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .benefits-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .how-to-use-body {
+            display: flex;
+            flex-direction: row;
+            padding: 20px 0;
+            width: 80vw;
+            /* border: solid black 1px; */
+            justify-content: center;
+        }
+        
+        .how-to-use-box {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            padding: 2vw;
+            background-color: beige;
+            width: 15vw;
+            border-radius: 7px;
+            margin: 0 10px;
+        }
+
+        .how-to-use-box img {
+            width: 150px;
+        }
+
+        .how-to-use-box p {
+            width: 150px;
+        }
+        
+        .how-to-use-index {
+            position: absolute;
+            border: solid black 1px;
+            background-color: white;
+            border-radius: 2px;
+            padding: 2px 7px;
+            top: 0;
+            left: 0;
+        }
+
+        .how-to-use-steps {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .faq-answer {
+            text-align: left;
+            justify-content: flex-start !important;
+            align-items: flex-start !important;
+        }
+
+        .wrapper.full .faq-answer {
+            padding: 25px 20px;
+        }
+
+        @media screen and (max-width: 540px) {
+            .description-wrapper .wrapper-body {
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+            }    
+
+            .description-wrapper .wrapper-body img {
+                width: 80vw;
+            }
+
+            .ingredients-table-row {
+                flex-direction: column;
+            }
+            
+            .ingredient-box {
+                margin: 0;
+                width: 90vw;
+            }
+
+            .ingredient-box img {
+                width: 20vw;
+            }
+
+            .benefit-box {
+                width: 80vw;
+            }
+
+            .how-to-use-body {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .how-to-use-body iframe {
+                width: 90vw;
+                /* height: 150px; */
+            }
+
+            .how-to-use-steps {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 0;
+            }
+
+            .how-to-use-box {
+                width: 50vw;
+            }
+        }
+    </style>
+    
+    <!-- description -->
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">Description</span><p class="arrow-p"><i class="arrow up"></i></p>
+
+        </div>
+        <div class="wrapper-body wrapper-body-closed">
+            <img class="wrapper-image" src="https://cdn.shopify.com/s/files/1/0055/7855/5503/files/avpl_with_aloe_1.png?v=1658747422" alt="image">
+            <ul class="wrapper-point_list">
+                <li><strong>Why Vitamin C:</strong> An indispensable nutrient for collagen production, vitamin C synergistically blends with hyaluronic acid and Vitamin E to brighten complexion, even out skin tone and minimize blemishes & dark spots.</li>
+                <li><strong>When to use:</strong> Himalayan Organics Vitamin C serum can be used during day and night care routine. Apply 2 to 3 drops using a dropper to glide across your cheek and spread over the entire face gently. Use appropriate hydrating moisturiser to seal the serum.</li>
+                <li><strong>How it helps the skin:</strong>  The potent blend of vitamin C, hyaluronic acid, and vitamin E is gentle, yet highly effective at reversing the effects of time and environmental damage. It also helps clear up the skin! The Non-irritating formula that is great for all skin types.</li>
+                <li><strong>What is in it:</strong> A perfect blend of Vitamin C, Moringa Oleifera Oil, Vitamin E, and Hyaluronic Acid, and Ashwagandha Extract, all together serve high antioxidant properties, and help your skin stay healthy, glowing, and clean.</li>
+                <li><strong>Who can use it:</strong> Beautifully crafted to suit all skin types, it works wonderfully for sensitive skin, combination, dry and oily skin.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /description -->
+
+    <!-- key ingredients -->
+    <div class="wrapper ingredients-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">Key Ingredients</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed">
+            <div class="ingredients-table">
+                <div class="ingredients-table-row">
+                    <div class="ingredient-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Moringa_2_223350aa-e7c4-4f9a-bba4-99e5d825ff09.jpg?v=1673603452" alt="moringa_extract">
+                        <p>
+                            <strong>Moringa Extract -  </strong>Improves your complexion and promotes an even skin tone. 
+                        </p>
+                    </div>
+                    <div class="ingredient-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Moringa_2.jpg?v=1673350566" alt="moringa">
+                        <p>
+                            <strong>Moringa - </strong>Packed with antioxidants and bioactive compounds, Moringa regulates blood sugar levels, manages inflammation, combats free radicals, and boosts immunity.
+                        </p>
+                    </div>
+                </div>
+                <div class="ingredients-table-row">
+                    <div class="ingredient-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/aloe_vera.png?v=1673603453" alt="aloe_vera">
+                        <p>
+                            <strong>Aloe Vera Leaf Extract - </strong>Inhibits the production of free radicals and prevents excess melanin for even tone and blemish-free skin.
+                        </p>
+                    </div>
+                    <div class="ingredient-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/liquorice_extract.png?v=1673603454" alt="liquorice_extract">
+                        <p>
+                            <strong>Liquorice Extract - </strong>Inhibits the production of free radicals and prevents excess melanin for even tone and blemish-free skin.
+                        </p>
+                    </div>
+                </div>
+                <div class="ingredients-table-row">
+                    <div class="ingredient-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/gotu_kola.png?v=1673603454" alt="gotu_kola">
+                        <p>
+                            <strong>Gotu Kola Extract - </strong>Loaded with healing properties, it inhibits sagging skin, promotes new skin cell production, and enhances the skin’s resilience.
+                        </p>
+                    </div>
+                    <div class="ingredient-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Niacinamide.png?v=1673603453" alt="Niacinamide">
+                        <p>
+                            <strong>Niacinamide (Vitamin B3) - </strong>Safeguards skin from oxidative and environmental stress along with easing inflammatory skin issues for naturally glowing skin.
+                        </p>
+                    </div>
+                </div>
+            </table>
+        </div>
+    </div></div>
+    <!-- /key ingredients -->
+
+    <!-- benefits -->
+    <div class="wrapper benefits-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed">
+            <div class="benefits-list">
+                <div class="benefit-box">
+                    <strong>Nourishment to Skin</strong>
+                    <span>Vitamin C Serum works on the surface and deep in the skin to promote and prolong a more youthful and healthy looking complexion.</span>
+                </div>
+                <div class="benefit-box">
+                    <strong>Enhanced complexion</strong>
+                    <span>The antioxidants in serum help regulate overproduction of melatonin, and keep the skin brighter and even toned.</span>
+                </div>
+                <div class="benefit-box">
+                    <strong>Reduces Acne Scars</strong>
+                    <span>The strong healing power of the serum reduces discoloration and redness, making your skin spotless.</span>
+                </div>
+                <div class="benefit-box">
+                    <strong>Moisturized and healthy skin</strong>
+                    <span>Niacinamide and hyaluronic acid locks the moisture in, and keeps the top layer healthy and nourished.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /benefits -->
+    
+    <!-- how to use -->
+    <div class="wrapper how-to-use-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">How to use?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed">
+            <div class="how-to-use-body">
+                <div class="how-to-use-steps">
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">1</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-01.png?v=1673603517" alt="">
+                        <p>Wash your face & let it dry. </p>
+                    </div>
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">2</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-02.png?v=1673603518" alt="">
+                        <p>Put 2 to 3 drops directly over the face.</p>
+                    </div>
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">3</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
+                        <p>Spread over the entire face gently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /how to use -->
+
+    <!-- FAQs -->
+    <h2 class="faqs">FAQs</h2>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">What is a suitable moisturizer to apply after Vitamin C serum?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Himalayan Organics Vitamin C Day Cream is ideal for moisturising after applying Himalayan Organics Vitamin C Serum.
+        </div>
+    </div>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">What is the type of vitamin c in this serum?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Himalayan Organics vitamin C serum comes with the most stable form of
+            vitamin C, which is ascorbic acid, which also contains citric acid.
+        </div>
+    </div>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">Is the serum only suitable for night routine?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Himalayan Organics vitamin C serum can be applied on a washed and cleaned
+            face during the day and in the nighttime before the day or cream for the best
+            results.
+        </div>
+    </div>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;"> Does this help to reduce hyperpigmentation?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Yes, Himalayan Organics vitamin C serum comes with a quick absorption
+            formula for deeper penetration to reduce the production of melanin and, thus,
+            reduce pigmentation and dark spots.
+        </div>
+    </div>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">Is this suitable for oily skin?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Yes, it is suitable for all skin types.
+        </div>
+    </div>
+    <!-- /FAQs -->
+
+    <script>
+        const buttons = document.querySelectorAll(".wrapper");
+        buttons.forEach(element => {
+            element.addEventListener("click", () => {
+                element.classList.toggle("full");
+            })
+        });
+    </script>
+</body>
+</html>
