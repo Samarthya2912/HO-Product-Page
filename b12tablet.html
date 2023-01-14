@@ -24,7 +24,7 @@
             list-style-type: square;
         }
         
-        .wrapper-point_list * {
+        .wrapper-point_list > * {
             margin: 20px;
         }
         
@@ -86,13 +86,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 400px;
+            width: 30vw;
             text-align: justify;
             margin: 0 60px;
         }
 
         .ingredient-box > img {
             margin: 10px;
+            width: 100px;
+            border-radius: 50%;
+            /* overflow: hidden; */
         }
 
         .ingredient-table {
@@ -115,6 +118,7 @@
             text-align: center;
             height: 15vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -167,7 +171,7 @@
         }
 
         .wrapper.full .faq-answer {
-            padding: 10px 20px;
+            padding: 25px 20px;
         }
 
         @media screen and (max-width: 540px) {
@@ -231,9 +235,11 @@
         <div class="wrapper-body wrapper-body-closed">
             <img class="wrapper-image" src="https://cdn.shopify.com/s/files/1/0055/7855/5503/files/avpl_with_aloe_1.png?v=1658747422" alt="image">
             <ul class="wrapper-point_list">
-                <li>Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
-                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, obcaecati.</li>
-                <li>With an extra cottony-soft surface and a curvy design for your extra comfort, Pee Safe is here with Aloe Vera Panty Liners. These panty liners can also be used around the days of your periods in order to avoid spotting and white discharge.</li>
+                <li><strong>Importance of Vitamin B12:</strong> Your body needs Vitamin B12 for normal functioning of nerve cells, red blood cells formulation, DNA synthesis & improving memory.</li>
+                <li><strong>What's in the capsule:</strong> Contains plant-based sources of B12 such as Stevia Leaves, Alfalfa Leaves, Moringa, Wheatgrass, Beetroot.</li>
+                <li><strong>How many capsules in 1 pack:</strong> It contains 120 vegan and gluten-free capsules for your healthy metabolism and superior nerve health.</li>
+                <li><strong>Who can take:</strong> These plant-based capsules can be taken by both men & women for managing daily B12 deficiency. </li>
+                <li><strong>How to Use: </strong>For holistic nutrition, Take 2 capsules daily, preferably one each, after lunch and dinner, or as prescribed by your healthcare professional.</li>
             </ul>
         </div>
     </div>
@@ -248,43 +254,37 @@
             <div class="ingredients-table">
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/1396/3773/files/kakadu.png?v=1618642425" alt="ingredient">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Beetroot_1.jpg?v=1673350566" alt="beetroot">
                         <p>
-                            <strong>Kakadu Plum Extract - </strong>From Australian kakadu plums, the richest vitamin C source. Help fight free radicals and stimulate collagen synthesis.
+                            <strong>Beetroot - </strong>Rich in essential nutrients and low in calories, beetroot helps manage blood pressure, improve athletic performance, and boost digestive health.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/1396/3773/files/kakadu.png?v=1618642425" alt="ingredient">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Moringa_2.jpg?v=1673350566" alt="moringa">
                         <p>
-                            <strong>Kakadu Plum Extract - </strong>From Australian kakadu plums, the richest vitamin C source. Help fight free radicals and stimulate collagen synthesis.
-                        </p>
-                    </div>
-                </div>
-                <div class="ingredients-table-row">
-                    <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/1396/3773/files/kakadu.png?v=1618642425" alt="ingredient">
-                        <p>
-                            <strong>Kakadu Plum Extract - </strong>From Australian kakadu plums, the richest vitamin C source. Help fight free radicals and stimulate collagen synthesis.
-                        </p>
-                    </div>
-                    <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/1396/3773/files/kakadu.png?v=1618642425" alt="ingredient">
-                        <p>
-                            <strong>Kakadu Plum Extract - </strong>From Australian kakadu plums, the richest vitamin C source. Help fight free radicals and stimulate collagen synthesis.
+                            <strong>Moringa - </strong>Packed with antioxidants and bioactive compounds, Moringa regulates blood sugar levels, manages inflammation, combats free radicals, and boosts immunity.
                         </p>
                     </div>
                 </div>
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/1396/3773/files/kakadu.png?v=1618642425" alt="ingredient">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Wheatgrass_3.jpg?v=1673350566" alt="wheatgrass">
                         <p>
-                            <strong>Kakadu Plum Extract - </strong>From Australian kakadu plums, the richest vitamin C source. Help fight free radicals and stimulate collagen synthesis.
+                            <strong>Wheatgrass - </strong>A superfood, wheatgrass helps eliminate toxins, improves digestion, and boosts your metabolism.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/1396/3773/files/kakadu.png?v=1618642425" alt="ingredient">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Alfalfa.jpg?v=1673350566" alt="alfalfa">
                         <p>
-                            <strong>Kakadu Plum Extract - </strong>From Australian kakadu plums, the richest vitamin C source. Help fight free radicals and stimulate collagen synthesis.
+                            <strong>Alfalfa - </strong>Rich in oxidants and vitamins, Alfalfa lowers blood cholesterol and helps balance blood sugar levels.
+                        </p>
+                    </div>
+                </div>
+                <div class="ingredients-table-row">
+                    <div class="ingredient-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Green_Amla.jpg?v=1673350566" alt="green_amla">
+                        <p>
+                            <strong>Green Amla - </strong>FRich in antioxidants, Amla improves immunity, fastens metabolism, detoxifies the body, and supports digestive health.
                         </p>
                     </div>
                 </div>
@@ -301,13 +301,20 @@
         <div class="wrapper-body wrapper-body-closed">
             <div class="benefits-list">
                 <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium. 
-
+                    <strong>IMMUNE SYSTEM</strong>
+                    <span>These capsules are a blend of natural ingredients like Amla, Wheatgrass, and Beetroot, known to have a positive impact on your immunity.</span>
                 </div>
                 <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt.                </div>
+                    <strong>ANTIOXIDANT RICH</strong>
+                    <span>By nature, different ingredients in these capsules have antibacterial, antioxidant, and anti-inflammatory properties.</span>
+                </div>
                 <div class="benefit-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum pariatur expedita libero praesentium. Lorem ipsum dolor sit amet.
+                    <strong>HEALTHY RBC FORMULATION</strong>
+                    <span>It helps your body in the production of healthy red blood cells.</span>
+                </div>
+                <div class="benefit-box">
+                    <strong>SUPPORTS NERVE HEALTH</strong>
+                    <span>It has natural ingredients that supply adequate Vitamin B12 essential for the functioning of nervous system.</span>
                 </div>
             </div>
         </div>
@@ -315,7 +322,7 @@
     <!-- /benefits -->
     
     <!-- how to use -->
-    <div class="wrapper how-to-use-wrapper">
+    <!-- <div class="wrapper how-to-use-wrapper">
         <div class="wrapper_toggle_button">
             <span style="font-size: large;">How to use?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -341,25 +348,53 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- /how to use -->
 
     <!-- FAQs -->
     <h2 class="faqs">FAQs</h2>
     <div class="wrapper description-wrapper">
         <div class="wrapper_toggle_button">
-            <span style="font-size: large;">Some random question?</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span style="font-size: large;">This product contains corn flour or is gluten-free?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body wrapper-body-closed faq-answer">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta neque voluptatibus repellendus optio ex deserunt quia esse voluptates perferendis doloremque.
+            It is 100% organic and gluten-free!
         </div>
     </div>
     <div class="wrapper description-wrapper">
         <div class="wrapper_toggle_button">
-            <span style="font-size: large;">Some random question?</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span style="font-size: large;">If this product is derived from plants, how is it rich in b12?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body wrapper-body-closed faq-answer">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta neque voluptatibus repellendus optio ex deserunt quia esse voluptates perferendis doloremque.
+            It has Moringa leaves, Wheatgrass, Alfalfa leaves powder in it that are loaded with multivitamins.
+        </div>
+    </div>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">What are the Symptoms of B12 Deficiency?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Symptoms of vitamin B12 deficiency are fairly non-specific, and can include
+            fatigue, weakness, lightheadedness, and loss of appetite. Shortness of breath,
+            numbness, and memory problems can also occur.
+        </div>
+    </div>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">What Happens if B12 Deficiency is Overlooked or Ignored?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            Because vitamin B12 helps in the formation of nucleotides (genetic material), a
+            deficiency can impair our normal production of DNA. This can first manifest as
+            difficulty with the normal production of red blood cells, and can result in anaemia.
+        </div>
+    </div>
+    <div class="wrapper description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span style="font-size: large;">ARE ANIMAL FOODS A GOOD SOURCE OF VITAMIN B12?</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body wrapper-body-closed faq-answer">
+            No
         </div>
     </div>
     <!-- /FAQs -->
