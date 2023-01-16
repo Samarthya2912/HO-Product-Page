@@ -52,15 +52,15 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            transform: scaleY(0);    
+            transform-origin: top;
+            transition: all 0.35s ease, padding 0s;
             max-height: 0;
-            transition: max-height 0.4s ease-in-out;
-            transition: padding 0s;
-            overflow-y: hidden;
         }
 
         .wrapper.full > .wrapper-body {
-            max-height: 1500px;
-            transition: max-height 0.4s ease-in-out;
+            transform: scaleY(1);
+            max-height: 1000px;
         }
 
         .wrapper .arrow-p {
@@ -142,7 +142,6 @@
             flex-direction: row;
             padding: 20px 0;
             width: 80vw;
-            /* border: solid black 1px; */
             justify-content: center;
         }
         
@@ -183,6 +182,10 @@
             text-align: left;
             justify-content: flex-start !important;
             align-items: flex-start !important;
+        }
+
+        .wrapper .faq-answer {
+            padding: 0 20px;
         }
 
         .wrapper.full .faq-answer {
