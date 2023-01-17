@@ -102,7 +102,6 @@
             width: 100px;
             border-radius: 50% !important;
             border: solid orange 1px !important;
-            /* overflow: hidden; */
         }
 
         .ingredient-table {
@@ -176,6 +175,8 @@
         .how-to-use-steps {
             display: flex;
             justify-content: space-evenly;
+            max-width: 80%;
+            overflow-y: scroll;
         }
 
         .faq-answer {
@@ -214,6 +215,12 @@
             display: flex;
             width: 100%;
             justify-content: space-evenly;
+        }
+
+        .navigation-button-wrapper {
+            position: absolute;
+            bottom: 0;
+            max-width: 80%;
         }
 
         @media screen and (max-width: 540px) {
@@ -374,7 +381,7 @@
     <!-- /benefits -->
     
     <!-- how to use -->
-    <div class="wrapper how-to-use-wrapper">
+    <div class="wrapper full how-to-use-wrapper">
         <div class="wrapper_toggle_button">
             <span style="font-size: large;">How to use?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -395,6 +402,25 @@
                         <div class="how-to-use-index">3</div>
                         <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
                         <p>Spread over the entire face gently.</p>
+                    </div>
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">3</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
+                        <p>Spread over the entire face gently.</p>
+                    </div>
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">3</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
+                        <p>Spread over the entire face gently.</p>
+                    </div>
+                    <div class="how-to-use-box">
+                        <div class="how-to-use-index">3</div>
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
+                        <p>Spread over the entire face gently.</p>
+                    </div>
+                    <div class="navigation-button-wrapper">
+                        <button class="navigation-button left-move-arrow">Left</button>
+                        <button class="navigation-button right-move-arrow">Right</button>
                     </div>
                 </div>
             </div>
@@ -482,6 +508,13 @@
                 element.classList.toggle("full");
             })
         });
+
+        const navigationButtons = document.querySelectorAll(".navigation-button");
+        navigationButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+            })
+        })
     </script>
 </body>
 </html>
