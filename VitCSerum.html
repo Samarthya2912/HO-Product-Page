@@ -10,6 +10,7 @@
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
         .wrapper {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             max-width: 95vw;
@@ -174,9 +175,10 @@
 
         .how-to-use-steps {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             max-width: 80%;
             overflow-y: scroll;
+            scroll-behavior: smooth;
         }
 
         .faq-answer {
@@ -221,6 +223,29 @@
             position: absolute;
             bottom: 0;
             max-width: 80%;
+            left: 50%;
+        }
+
+        .navigation-button {
+            background: none;
+            border: none;
+        }
+        
+        .navigation-button-wrapper i {
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        .navigation-button-wrapper i:hover {
+            color: green;
+        }
+
+        .how-to-use-steps {
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .how-to-use-steps::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
         }
 
         @media screen and (max-width: 540px) {
@@ -419,8 +444,8 @@
                         <p>Spread over the entire face gently.</p>
                     </div>
                     <div class="navigation-button-wrapper">
-                        <button class="navigation-button left-move-arrow">Left</button>
-                        <button class="navigation-button right-move-arrow">Right</button>
+                        <button class="navigation-button left-move-arrow"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                        <button class="navigation-button right-move-arrow"><i class="bi bi-arrow-right-circle-fill"></i></button>
                     </div>
                 </div>
             </div>
@@ -510,10 +535,14 @@
         });
 
         const navigationButtons = document.querySelectorAll(".navigation-button");
-        navigationButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-            })
+        navigationButtons[0].addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.querySelector(".how-to-use-steps").scrollLeft -= 500;
+        })
+
+        navigationButtons[1].addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.querySelector(".how-to-use-steps").scrollLeft += 500;
         })
     </script>
 </body>
