@@ -11,8 +11,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-        .wrapper {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        .wrapper, .description-wrapper {
             max-width: 95vw;
             font-family: 'Poppins', sans-serif;
             margin: 10px 20px;
@@ -57,6 +56,13 @@
             transform-origin: top;
             transition: all 0.35s ease, padding 0s;
             max-height: 0;
+        }
+
+        .description-wrapper > .wrapper-body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         .wrapper.full > .wrapper-body {
@@ -176,7 +182,6 @@
         .how-to-use-steps {
             display: flex;
             justify-content: flex-start;
-            max-width: 80%;
             overflow-y: scroll;
             scroll-behavior: smooth;
         }
@@ -223,7 +228,7 @@
             position: absolute;
             bottom: 0;
             max-width: 80%;
-            left: 50%;
+            left: 47.5%;
         }
 
         .navigation-button {
@@ -246,6 +251,15 @@
         }
         .how-to-use-steps::-webkit-scrollbar { 
             display: none;  /* Safari and Chrome */
+        }   
+
+        .wrapper-point_list {
+            width: 60%;
+        }
+
+        .description-wrapper iframe {
+            width: 40%;
+            height: 300px;
         }
 
         @media screen and (max-width: 540px) {
@@ -305,13 +319,9 @@
     </style>
     
     <!-- description -->
-    <div class="wrapper description-wrapper">
-        <div class="wrapper_toggle_button">
-            <span style="font-size: large;">Description</span><p class="arrow-p"><i class="arrow up"></i></p>
-
-        </div>
+    <div class="description-wrapper">
         <div class="wrapper-body wrapper-body-closed">
-            <!-- <img class="wrapper-image" src="https://cdn.shopify.com/s/files/1/0055/7855/5503/files/avpl_with_aloe_1.png?v=1658747422" alt="image"> -->
+            <iframe src="https://www.youtube.com/embed/jnKKDUsxC2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <ul class="wrapper-point_list">
                 <li><strong>Why Vitamin C:</strong> An indispensable nutrient for collagen production, vitamin C synergistically blends with hyaluronic acid and Vitamin E to brighten complexion, even out skin tone and minimize blemishes & dark spots.</li>
                 <li><strong>When to use:</strong> Himalayan Organics Vitamin C serum can be used during day and night care routine. Apply 2 to 3 drops using a dropper to glide across your cheek and spread over the entire face gently. Use appropriate hydrating moisturiser to seal the serum.</li>
@@ -428,21 +438,6 @@
                         <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
                         <p>Spread over the entire face gently.</p>
                     </div>
-                    <div class="how-to-use-box">
-                        <div class="how-to-use-index">3</div>
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
-                        <p>Spread over the entire face gently.</p>
-                    </div>
-                    <div class="how-to-use-box">
-                        <div class="how-to-use-index">3</div>
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
-                        <p>Spread over the entire face gently.</p>
-                    </div>
-                    <div class="how-to-use-box">
-                        <div class="how-to-use-index">3</div>
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
-                        <p>Spread over the entire face gently.</p>
-                    </div>
                     <div class="navigation-button-wrapper">
                         <button class="navigation-button left-move-arrow"><i class="bi bi-arrow-left-circle-fill"></i></button>
                         <button class="navigation-button right-move-arrow"><i class="bi bi-arrow-right-circle-fill"></i></button>
@@ -452,31 +447,7 @@
         </div>
     </div>
     <!-- /how to use -->
-
-    <!-- USPs -->
-    <div class="wrapper usp-wrapper">
-        <h3>YOUR DAILY CLEAN, GREEN, VEGAN NUTRITION</h3>
-        <div class="usp-items">
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Parabens.png?v=1673614423" alt="">
-                <span>No Paraben</span>
-            </div>
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Mineral_Oil.png?v=1673614423" alt="">
-                <span>No Mineral Oil</span>
-            </div>
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Cruelty-free.png?v=1673614423" alt="">
-                <span>Cruelty-free</span>
-            </div>
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Women_made_women_powered.png?v=1673614423" alt="">
-                <span>Women made women powered</span>
-            </div>
-        </div>
-    </div>
-    <!-- /USPs -->
-
+    
     <!-- FAQs -->
     <h2 class="faqs">FAQs</h2>
     <div class="wrapper description-wrapper">
@@ -525,6 +496,31 @@
         </div>
     </div>
     <!-- /FAQs -->
+
+    <!-- USPs -->
+    <div class="wrapper usp-wrapper">
+        <h3>YOUR DAILY CLEAN, GREEN, VEGAN NUTRITION</h3>
+        <div class="usp-items">
+            <div class="usp-box">
+                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Parabens.png?v=1673614423" alt="">
+                <span>No Paraben</span>
+            </div>
+            <div class="usp-box">
+                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Mineral_Oil.png?v=1673614423" alt="">
+                <span>No Mineral Oil</span>
+            </div>
+            <div class="usp-box">
+                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Cruelty-free.png?v=1673614423" alt="">
+                <span>Cruelty-free</span>
+            </div>
+            <div class="usp-box">
+                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Women_made_women_powered.png?v=1673614423" alt="">
+                <span>Women made women powered</span>
+            </div>
+        </div>
+    </div>
+    <!-- /USPs -->
+
 
     <script>
         const buttons = document.querySelectorAll(".wrapper");
