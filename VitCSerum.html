@@ -11,9 +11,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+        strong {
+            font-weight: 600 !important;
+        }
         .wrapper, .description-wrapper {
             max-width: 95vw;
-            font-family: 'Poppins', sans-serif;
+            /* font-family: 'Poppins', sans-serif; */
             margin: 10px 20px;
             background-color: #f8f8f8;
             font-size: inherit;
@@ -26,10 +29,17 @@
         .wrapper-point_list {
             list-style-type: square;
         }
+        .wrapper-point_list > li::marker {
+            margin: 10px 0;
+            content: "\25ba";
+            color: #0c4304;
+        }
         
         .wrapper-point_list > * {
-            margin: 20px;
+            margin: 10px;
+            padding: 0 5px
         }
+
         
         .wrapper_toggle_button {
             display: flex;
@@ -167,6 +177,7 @@
 
         .how-to-use-box p {
             width: 150px;
+            text-align: center;
         }
         
         .how-to-use-index {
@@ -190,6 +201,7 @@
             text-align: left;
             justify-content: flex-start !important;
             align-items: flex-start !important;
+            background-color: #fff !important;
         }
 
         .wrapper .faq-answer {
@@ -260,9 +272,15 @@
         .description-wrapper iframe {
             width: 40%;
             height: 300px;
+            padding: 20px;
         }
 
         @media screen and (max-width: 540px) {
+
+            .navigation-button-wrapper {
+                display: none
+                /* max-width: 100%; */
+            }
             .description-wrapper .wrapper-body {
                 display: flex;
                 flex-direction: column;
@@ -270,9 +288,9 @@
             }    
 
             .description-wrapper .wrapper-body img {
-                width: 80vw;
+                /* width: 80vw; */
+                width: 35%;
             }
-
             .ingredients-table-row {
                 flex-direction: column;
             }
@@ -280,6 +298,7 @@
             .ingredient-box {
                 margin: 0;
                 width: 90vw;
+                flex-direction: column;
             }
 
             .ingredient-box img {
@@ -313,7 +332,11 @@
             }
 
             .usp-items {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 20px;
+                text-align: center;
             }
 
             .description-wrapper .wrapper-body {
@@ -322,9 +345,8 @@
 
             .description-wrapper iframe {
                 width: 100%;
-                height: 300px;
+                height: 200px;
             }
-
             .description-wrapper  .wrapper-point_list {
                 width: 100%;
             }
@@ -343,7 +365,7 @@
     <!-- description -->
     <div class="description-wrapper">
         <div class="wrapper-body wrapper-body-closed">
-            <iframe src="https://www.youtube.com/embed/jnKKDUsxC2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <img class="description-img" src ="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/00012851_1.jpg?v=1674019219">
             <ul class="wrapper-point_list">
                 <li><strong>Why Vitamin C:</strong> An indispensable nutrient for collagen production, vitamin C synergistically blends with hyaluronic acid and Vitamin E to brighten complexion, even out skin tone and minimize blemishes & dark spots.</li>
                 <li><strong>When to use:</strong> Himalayan Organics Vitamin C serum can be used during day and night care routine. Apply 2 to 3 drops using a dropper to glide across your cheek and spread over the entire face gently. Use appropriate hydrating moisturiser to seal the serum.</li>
