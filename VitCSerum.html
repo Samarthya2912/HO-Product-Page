@@ -11,15 +11,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-        strong {
-            font-weight: 600 !important;
-        }
         .wrapper, .description-wrapper {
             max-width: 95vw;
-            /* font-family: 'Poppins', sans-serif; */
+            font-family: 'Poppins', sans-serif;
             margin: 10px 20px;
             background-color: #f8f8f8;
-            font-size: inherit;
         }
 
         .wrapper-image {
@@ -36,8 +32,8 @@
         }
         
         .wrapper-point_list > * {
-            margin: 10px;
-            padding: 0 5px
+            margin: 20px;
+            padding: 0 20px
         }
 
         
@@ -50,6 +46,7 @@
             cursor: pointer;
             background-color: #f8f8f8;
             border-radius: 5px;
+            font-weight: bolder;
         }
 
         .wrapper_toggle_button:hover {
@@ -77,7 +74,7 @@
 
         .wrapper.full > .wrapper-body {
             transform: scaleY(1);
-            max-height: 1000px;
+            max-height: 3000px;
         }
 
         .wrapper .arrow-p {
@@ -118,7 +115,7 @@
             margin: 10px;
             width: 100px;
             border-radius: 50% !important;
-            border: solid orange 1px !important;
+            /* border: solid orange 1px !important; */
         }
 
         .ingredient-table {
@@ -275,7 +272,7 @@
             padding: 20px;
         }
 
-        @media screen and (max-width: 540px) {
+        @media screen and (max-width: 850px) {
 
             .navigation-button-wrapper {
                 display: none
@@ -287,18 +284,30 @@
                 text-align: justify;
             }    
 
-            .description-wrapper .wrapper-body img {
-                /* width: 80vw; */
-                width: 35%;
+            .wrapper, .description-wrapper {
+                font-size: 14px;
             }
+
+            .description-wrapper .wrapper-body img {
+                width: 80vw;
+            }
+            
+            .ingredient-table {
+                width: 100%;
+            }
+
             .ingredients-table-row {
                 flex-direction: column;
             }
             
             .ingredient-box {
-                margin: 0;
-                width: 90vw;
+                display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80vw;
+                text-align: justify;
+                margin: 0 60px;
             }
 
             .ingredient-box img {
@@ -315,7 +324,7 @@
                 align-items: center;
             }
 
-            .how-to-use-body iframe {
+            .description-wrapper iframe {
                 width: 90vw;
                 /* height: 150px; */
             }
@@ -347,6 +356,7 @@
                 width: 100%;
                 height: 200px;
             }
+
             .description-wrapper  .wrapper-point_list {
                 width: 100%;
             }
@@ -359,6 +369,10 @@
                 padding: 20px;
                 width: 100%;
             }
+
+            .faq-wrapper .wrapper_toggle_button {
+                font-weight: 500; /* in b12 */
+            } 
         }
     </style>
     
@@ -494,7 +508,7 @@
     
     <!-- FAQs -->
     <h2 class="faqs">FAQs</h2>
-    <div class="wrapper description-wrapper">
+    <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
             <span>What is a suitable moisturizer to apply after Vitamin C serum?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -502,7 +516,7 @@
             Himalayan Organics Vitamin C Day Cream is ideal for moisturising after applying Himalayan Organics Vitamin C Serum.
         </div>
     </div>
-    <div class="wrapper description-wrapper">
+    <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
             <span>What is the type of vitamin c in this serum?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -511,7 +525,7 @@
             vitamin C, which is ascorbic acid, which also contains citric acid.
         </div>
     </div>
-    <div class="wrapper description-wrapper">
+    <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
             <span>Is the serum only suitable for night routine?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -521,7 +535,7 @@
             results.
         </div>
     </div>
-    <div class="wrapper description-wrapper">
+    <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
             <span> Does this help to reduce hyperpigmentation?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -531,7 +545,7 @@
             reduce pigmentation and dark spots.
         </div>
     </div>
-    <div class="wrapper description-wrapper">
+    <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
             <span>Is this suitable for oily skin?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
