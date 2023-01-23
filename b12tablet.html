@@ -152,13 +152,12 @@
             border-radius: 5px;
             margin: 10px;
             min-width: 150px;
-            text-align: center;
+            text-align: left;
             height: 20vh;
+            border: solid 1px gray;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            border: solid 1px gray;
         }
 
         .benefits-list {
@@ -418,6 +417,7 @@
             .benefit-box {
                 padding: 20px;
                 width: 100%;
+                height: 15vh;
             }
 
             .faq-wrapper .wrapper_toggle_button {
@@ -441,7 +441,7 @@
     <!-- /description -->
 
     <!-- key ingredients -->
-    <div class="wrapper full ingredients-wrapper">
+    <div class="wrapper ingredients-wrapper">
         <div class="wrapper_toggle_button">
             <span>Key Ingredients</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -489,15 +489,18 @@
     <!-- /key ingredients -->
 
     <!-- benefits -->
-    <div class="wrapper benefits-wrapper">
+    <div class="wrapper full benefits-wrapper">
         <div class="wrapper_toggle_button">
             <span>Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body wrapper-body-closed">
             <div class="benefits-list">
                 <div class="benefit-box">
-                    <strong>IMMUNE SYSTEM</strong>
-                    <span>These capsules are a blend of natural ingredients like Amla, Wheatgrass, and Beetroot, known to have a positive impact on your immunity.</span>
+                    <div class="benefit-box-left-pane"></div>
+                    <div class="benefit-box-right-pane">
+                        <strong>IMMUNE SYSTEM</strong>
+                        <span>These capsules are a blend of natural ingredients like Amla, Wheatgrass, and Beetroot, known to have a positive impact on your immunity.</span>
+                    </div>
                 </div>
                 <div class="benefit-box">
                     <strong>ANTIOXIDANT RICH</strong>
