@@ -15,10 +15,12 @@
             max-width: 95vw;
             font-family: 'Poppins', sans-serif;
             margin: 10px 20px;
+            --wrapper-toggle-button-color: #f8f8f8;
+            --ingredient-card-color: #ECEDED;
         }
         
-        .wrapper_toggle_button, .wrapper-body {
-            background-color: #f8f8f8;
+        .wrapper_toggle_button {
+            background-color: var(--wrapper-toggle-button-color);
         }
 
         .description-wrapper img {
@@ -124,12 +126,13 @@
             width: 30vw;
             text-align: justify;
             margin: 0 60px;
+            background-color: var(--ingredient-card-color);
+
         }
 
         .ingredient-box > img {
             margin: 10px;
-            width: 100px;
-            border-radius: 50% !important;
+            width: 100%;
             /* border: solid orange 1px !important; */
         }
 
@@ -332,13 +335,23 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 70vw;
+                width: 80vw;
                 text-align: justify;
                 margin: 0 60px;
+                border-radius: 10px;
+                margin-bottom: 20px;
             }
 
-            .ingredient-box img {
-                width: 30vw;
+            .ingredient-box p {
+                padding: 5px 20px;
+            }
+
+            .ingredient-image {
+                width: 100%;
+                height: 120px;
+                background-position: center;
+                background-size: cover;
+                border-radius: 10px;
             }
 
             .benefit-box {
@@ -427,7 +440,7 @@
     <!-- /description -->
 
     <!-- key ingredients -->
-    <div class="wrapper ingredients-wrapper">
+    <div class="wrapper full ingredients-wrapper">
         <div class="wrapper_toggle_button">
             <span>Key Ingredients</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -435,13 +448,13 @@
             <div class="ingredients-table">
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Beetroot_1.jpg?v=1673350566" alt="beetroot">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Beetroot_1.jpg?v=1673350566);"></div>
                         <p>
                             <strong>Beetroot - </strong>Rich in essential nutrients and low in calories, beetroot helps manage blood pressure, improve athletic performance, and boost digestive health.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Moringa_2.jpg?v=1673350566" alt="moringa">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Moringa_2.jpg?v=1673350566);"></div>
                         <p>
                             <strong>Moringa - </strong>Packed with antioxidants and bioactive compounds, Moringa regulates blood sugar levels, manages inflammation, combats free radicals, and boosts immunity.
                         </p>
@@ -449,13 +462,13 @@
                 </div>
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Wheatgrass_3.jpg?v=1673350566" alt="wheatgrass">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Wheatgrass_3.jpg?v=1673350566);"></div>
                         <p>
                             <strong>Wheatgrass - </strong>A superfood, wheatgrass helps eliminate toxins, improves digestion, and boosts your metabolism.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Alfalfa.jpg?v=1673350566" alt="alfalfa">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Alfalfa.jpg?v=1673350566);"></div>
                         <p>
                             <strong>Alfalfa - </strong>Rich in oxidants and vitamins, Alfalfa lowers blood cholesterol and helps balance blood sugar levels.
                         </p>
@@ -463,7 +476,7 @@
                 </div>
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Green_Amla.jpg?v=1673350566" alt="green_amla">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Green_Amla.jpg?v=1673350566);"></div>
                         <p>
                             <strong>Green Amla - </strong>Rich in antioxidants, Amla improves immunity, fastens metabolism, detoxifies the body, and supports digestive health.
                         </p>
