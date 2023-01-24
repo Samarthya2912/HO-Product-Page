@@ -10,8 +10,7 @@
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-        
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");        
         .wrapper, .description-wrapper {
             max-width: 95vw;
             font-family: 'Poppins', sans-serif;
@@ -383,12 +382,13 @@
                 margin: 0 60px;
                 border-radius: 10px;
                 margin-bottom: 20px;
-                padding: 0;
                 margin-top: 10px;
+                padding: 0;
             }
 
             .ingredient-box p {
-                padding: 5px 20px;
+                /* padding: 5px 20px; */
+                width: 90%;
             }
 
             .ingredient-image {
@@ -440,6 +440,11 @@
 
             .how-to-use-box {
                 width: 50vw;
+            }
+
+            .usp-wrapper {
+                width: 80vw;
+                padding: 10px;
             }
 
             .usp-items {
@@ -498,6 +503,42 @@
     </div>
     <!-- /description -->
 
+    <!-- benefits -->
+    <div class="wrapper benefits-wrapper">
+        <div class="wrapper_toggle_button">
+            <span>Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
+        <div class="wrapper-body">
+            <div class="benefits-list">
+                <div class="benefit-box">
+                    <div class="benefit-box-right-pane">
+                        <strong>Nourishment to Skin</strong>
+                        <span>Vitamin C Serum works on the surface and deep in the skin to promote and prolong a more youthful and healthy looking complexion.</span>
+                    </div>
+                </div>
+                <div class="benefit-box">
+                    <div class="benefit-box-right-pane">
+                        <strong>Enhanced complexion</strong>
+                        <span>The antioxidants in serum help regulate overproduction of melatonin, and keep the skin brighter and even toned.</span>
+                    </div>
+                </div>
+                <div class="benefit-box">
+                    <div class="benefit-box-right-pane">
+                        <strong>Reduces Acne Scars</strong>
+                        <span>The strong healing power of the serum reduces discoloration and redness, making your skin spotless.</span>
+                    </div>
+                </div>
+                <div class="benefit-box">
+                    <div class="benefit-box-right-pane">
+                        <strong>Moisturized and healthy skin</strong>
+                        <span>Niacinamide and hyaluronic acid locks the moisture in, and keeps the top layer healthy and nourished.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /benefits -->
+
     <!-- key ingredients -->
     <div class="wrapper ingredients-wrapper">
         <div class="wrapper_toggle_button">
@@ -508,13 +549,13 @@
 
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/aloe_vera.png?v=1673603453" alt="aloe_vera">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/aloe_vera.png?v=1673603453);"></div>
                         <p>
                             <strong>Aloe Vera Leaf Extract - </strong>Inhibits the production of free radicals and prevents excess melanin for even tone and blemish-free skin.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/liquorice_extract.png?v=1673603454" alt="liquorice_extract">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/liquorice_extract.png?v=1673603454);"></div>
                         <p>
                             <strong>Liquorice Extract - </strong>Inhibits the production of free radicals and prevents excess melanin for even tone and blemish-free skin.
                         </p>
@@ -522,13 +563,13 @@
                 </div>
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/gotu_kola.png?v=1673603454" alt="gotu_kola">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/gotu_kola.png?v=1673603454);"></div>
                         <p>
                             <strong>Gotu Kola Extract - </strong>Loaded with healing properties, it inhibits sagging skin, promotes new skin cell production, and enhances the skin’s resilience.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Niacinamide.png?v=1673603453" alt="Niacinamide">
+                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Niacinamide.png?v=1673603453);"></div>
                         <p>
                             <strong>Niacinamide (Vitamin B3) - </strong>Safeguards skin from oxidative and environmental stress along with easing inflammatory skin issues for naturally glowing skin.
                         </p>
@@ -538,34 +579,6 @@
         </div>
     </div></div>
     <!-- /key ingredients -->
-
-    <!-- benefits -->
-    <div class="wrapper benefits-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
-        </div>
-        <div class="wrapper-body">
-            <div class="benefits-list">
-                <div class="benefit-box">
-                    <strong>Nourishment to Skin</strong>
-                    <span>Vitamin C Serum works on the surface and deep in the skin to promote and prolong a more youthful and healthy looking complexion.</span>
-                </div>
-                <div class="benefit-box">
-                    <strong>Enhanced complexion</strong>
-                    <span>The antioxidants in serum help regulate overproduction of melatonin, and keep the skin brighter and even toned.</span>
-                </div>
-                <div class="benefit-box">
-                    <strong>Reduces Acne Scars</strong>
-                    <span>The strong healing power of the serum reduces discoloration and redness, making your skin spotless.</span>
-                </div>
-                <div class="benefit-box">
-                    <strong>Moisturized and healthy skin</strong>
-                    <span>Niacinamide and hyaluronic acid locks the moisture in, and keeps the top layer healthy and nourished.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /benefits -->
     
     <!-- how to use -->
     <div class="wrapper how-to-use-wrapper">
