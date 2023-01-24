@@ -27,6 +27,10 @@
             width: 40vw;
         }
 
+        .description-wrapper .wrapper_toggle_button {
+            background-color: white;
+        }
+
         .description-wrapper .wrapper-body {
             padding: 0;
         }
@@ -131,10 +135,12 @@
             padding: 20px;
             margin: 10px;
             border-radius: 10px;
+            align-items: center;
         }
 
         .ingredient-box p {
             width: 70%;
+            text-align: left;
         }
 
         .ingredient-image {
@@ -144,6 +150,7 @@
             overflow: hidden;
             background-position: center;
             background-size: cover;
+            display: block !important;
         }
 
         .ingredient-table {
@@ -169,19 +176,20 @@
             margin: 10px;
             min-width: 150px;
             text-align: left;
-            height: 20vh;
-            width: 20vw;
+            height: 30rem;
+            width: 30rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             padding: 30px;
             background-color: var(--ingredient-card-color);
-
+            border: none !important;
         }
 
         .benefit-box-left-pane img {
             width: 100px;
+            border: none !important;
         }
 
         .benefit-box-right-pane {
@@ -410,6 +418,10 @@
                 /* height: 15vh; */
             }
 
+            .benefit-box img {
+                border: none !important;
+            }
+
             .benefit-box-right-pane {
                 align-items: flex-start;
                 text-align: left;
@@ -489,7 +501,10 @@
     </style>
     
     <!-- description -->
-    <div class="description-wrapper">
+    <div class="wrapper full description-wrapper">
+        <div class="wrapper_toggle_button">
+            <span>Description</span><p class="arrow-p"><i class="arrow up"></i></p>
+        </div>
         <div class="wrapper-body">
             <img class="description-img" src ="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/00012851_1.jpg?v=1674019219">
             <ul class="wrapper-point_list">
@@ -504,7 +519,7 @@
     <!-- /description -->
 
     <!-- benefits -->
-    <div class="wrapper benefits-wrapper">
+    <div class="wrapper full benefits-wrapper">
         <div class="wrapper_toggle_button">
             <span>Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -540,7 +555,7 @@
     <!-- /benefits -->
 
     <!-- key ingredients -->
-    <div class="wrapper ingredients-wrapper">
+    <div class="wrapper full ingredients-wrapper">
         <div class="wrapper_toggle_button">
             <span>Key Ingredients</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
@@ -581,7 +596,7 @@
     <!-- /key ingredients -->
     
     <!-- how to use -->
-    <div class="wrapper how-to-use-wrapper">
+    <div class="wrapper full how-to-use-wrapper">
         <div class="wrapper_toggle_button">
             <span>How to use?</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
