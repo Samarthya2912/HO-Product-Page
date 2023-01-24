@@ -131,10 +131,12 @@
             padding: 20px;
             margin: 10px;
             border-radius: 10px;
+            align-items: center;
         }
 
         .ingredient-box p {
             width: 70%;
+            text-align: left;
         }
 
         .ingredient-image {
@@ -144,6 +146,7 @@
             overflow: hidden;
             background-position: center;
             background-size: cover;
+            display: block !important;
         }
 
         .ingredient-table {
@@ -169,19 +172,20 @@
             margin: 10px;
             min-width: 150px;
             text-align: left;
-            height: 20vh;
-            width: 20vw;
+            height: 30rem;
+            width: 30rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             padding: 30px;
             background-color: var(--ingredient-card-color);
-
+            border: none !important;
         }
 
         .benefit-box-left-pane img {
             width: 100px;
+            border: none !important;
         }
 
         .benefit-box-right-pane {
@@ -407,6 +411,10 @@
                 padding: 5px;
                 height: fit-content;
                 /* height: 15vh; */
+            }
+
+            .benefit-box img {
+                border: none !important;
             }
 
             .benefit-box-right-pane {
