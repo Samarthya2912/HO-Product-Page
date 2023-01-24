@@ -10,7 +10,7 @@
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");        
         .wrapper, .description-wrapper {
             max-width: 95vw;
             font-family: 'Poppins', sans-serif;
@@ -34,7 +34,7 @@
         .wrapper-image {
             width: 400px;
         }
-        
+
         .wrapper-point_list {
             list-style-type: square;
         }
@@ -84,6 +84,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            background-color: var(--ingredient-card-color);
         }
 
 
@@ -156,6 +157,11 @@
             justify-content: space-evenly;
         }
 
+        .benefits-list {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
         .benefit-box {
             width: 35vw;
             padding: 20px 5vw;
@@ -164,14 +170,25 @@
             min-width: 150px;
             text-align: left;
             height: 20vh;
+            width: 20vw;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
+            padding: 30px;
             background-color: var(--ingredient-card-color);
+
+        }
+
+        .benefit-box-left-pane img {
+            width: 100px;
         }
 
         .benefit-box-right-pane {
-            text-align: left;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .benefits-list {
@@ -225,6 +242,14 @@
             scroll-behavior: smooth;
         }
 
+        .faq-wrapper .wrapper_toggle_button {
+            background-color: var(--ingredient-card-color);
+        }
+
+        .faq-answer {
+            background-color: var(--wrapper-toggle-button-color);
+        }
+
         .faq-answer {
             text-align: left;
             justify-content: flex-start !important;
@@ -250,6 +275,9 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            background-color: var(--ingredient-card-color);
+            border-radius: 10px;
+            margin-top: 60px;
         }
 
         .usp-box {
@@ -354,6 +382,8 @@
                 margin: 0 60px;
                 border-radius: 10px;
                 margin-bottom: 20px;
+                padding: 0;
+                margin-top: 10px;
             }
 
             .ingredient-box p {
@@ -372,7 +402,16 @@
                 width: 80vw;
                 padding: 10px;
                 width: 100%;
-                height: 15vh;
+                display: flex;
+                flex-direction: row;
+                padding: 5px;
+                height: fit-content;
+                /* height: 15vh; */
+            }
+
+            .benefit-box-right-pane {
+                align-items: flex-start;
+                text-align: left;
             }
 
             .benefit-box-left-pane img {
@@ -402,6 +441,11 @@
                 width: 50vw;
             }
 
+            .usp-wrapper {
+                width: 80vw;
+                padding: 10px;
+            }
+
             .usp-items {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -425,6 +469,7 @@
 
             .usp-wrapper {
                 max-width: 100vw;
+                width: 90vw;
             }
 
             .usp-box {
@@ -485,19 +530,14 @@
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Alfalfa.jpg?v=1673350566);"></div>
-                        <p>
-                            <strong>Alfalfa - </strong>Rich in oxidants and vitamins, Alfalfa lowers blood cholesterol and helps balance blood sugar levels.
-                        </p>
-                    </div>
-                </div>
-                <div class="ingredients-table-row">
-                    <div class="ingredient-box">
                         <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Green_Amla.jpg?v=1673350566);"></div>
                         <p>
                             <strong>Green Amla - </strong>Rich in antioxidants, Amla improves immunity, fastens metabolism, detoxifies the body, and supports digestive health.
                         </p>
                     </div>
+                </div>
+                <div class="ingredients-table-row">
+                    
                 </div>
             </table>
         </div>
@@ -505,7 +545,7 @@
     <!-- /key ingredients -->
 
     <!-- benefits -->
-    <div class="wrapper full benefits-wrapper">
+    <div class="wrapper benefits-wrapper">
         <div class="wrapper_toggle_button">
             <span>Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
         </div>
