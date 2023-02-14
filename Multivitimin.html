@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himalayan Organics</title>
-    
+    <title>Document</title>
 </head>
+
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");        
-        .wrapper, .description-wrapper {
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+        .wrapper,
+        .description-wrapper {
             max-width: 95vw;
             font-family: 'Poppins', sans-serif;
             margin: 10px 20px;
             --wrapper-toggle-button-color: #f8f8f8;
             --ingredient-card-color: #ECEDED;
         }
-        
+
         .wrapper_toggle_button {
             background-color: var(--wrapper-toggle-button-color);
         }
@@ -43,18 +46,18 @@
             list-style-type: square;
         }
 
-        .wrapper-point_list > li::marker {
+        .wrapper-point_list>li::marker {
             margin: 10px 0;
             content: "\25ba";
             color: #0c4304;
         }
 
-        .wrapper-point_list > * {
+        .wrapper-point_list>* {
             margin: 20px;
             padding: 0 20px
         }
 
-        
+
         .wrapper_toggle_button {
             display: flex;
             flex-direction: row;
@@ -71,19 +74,19 @@
             background-color: #f8f8f9;
         }
 
-        .wrapper > .wrapper-body {
+        .wrapper>.wrapper-body {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            transform: scaleY(0);    
+            transform: scaleY(0);
             transform-origin: top;
             transition: all 0.35s ease, padding 0s;
             max-height: 0;
         }
 
-        .description-wrapper > .wrapper-body {
+        .description-wrapper>.wrapper-body {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -95,7 +98,8 @@
         .description-wrapper img {
             width: 35vw;
         }
-        .wrapper.full > .wrapper-body {
+
+        .wrapper.full>.wrapper-body {
             transform: scaleY(1);
             max-height: 3000px;
         }
@@ -213,7 +217,7 @@
             width: 80vw;
             justify-content: center;
         }
-        
+
         .how-to-use-box {
             display: flex;
             align-items: center;
@@ -232,7 +236,7 @@
             width: 150px;
             text-align: center;
         }
-        
+
         .how-to-use-index {
             position: absolute;
             background-color: white;
@@ -275,7 +279,7 @@
 
         .usp-box img {
             width: 12vw;
-            border : none !important;
+            border: none !important;
         }
 
         .usp-wrapper {
@@ -311,7 +315,7 @@
             background: none;
             border: none;
         }
-        
+
         .navigation-button-wrapper i {
             cursor: pointer;
             font-size: 30px;
@@ -322,12 +326,16 @@
         }
 
         .how-to-use-steps {
-            -ms-overflow-style: none;  /* Internet Explorer 10+ */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+            scrollbar-width: none;
+            /* Firefox */
         }
-        .how-to-use-steps::-webkit-scrollbar { 
-            display: none;  /* Safari and Chrome */
-        }   
+
+        .how-to-use-steps::-webkit-scrollbar {
+            display: none;
+            /* Safari and Chrome */
+        }
 
         .description-wrapper .wrapper-point_list {
             width: 60%;
@@ -346,8 +354,9 @@
         @media screen and (max-width: 850px) {
             .navigation-button-wrapper {
                 display: none
-                /* max-width: 100%; */
+                    /* max-width: 100%; */
             }
+
             .description-wrapper .wrapper-body {
                 display: flex;
                 flex-direction: column;
@@ -358,20 +367,22 @@
                 padding-inline-start: 0;
             }
 
-            .wrapper, .description-wrapper {
+            .wrapper,
+            .description-wrapper {
                 position: relative;
                 margin: auto;
                 margin-top: 10px;
             }
 
-            .wrapper, .description-wrapper {
+            .wrapper,
+            .description-wrapper {
                 font-size: 14px;
             }
 
             .description-wrapper .wrapper-body img {
                 width: 80vw;
             }
-            
+
             .ingredient-table {
                 width: 100%;
             }
@@ -379,7 +390,7 @@
             .ingredients-table-row {
                 flex-direction: column;
             }
-            
+
             .ingredient-box {
                 display: flex;
                 flex-direction: column;
@@ -476,7 +487,7 @@
                 height: 200px;
             }
 
-            .description-wrapper  .wrapper-point_list {
+            .description-wrapper .wrapper-point_list {
                 width: 100%;
             }
 
@@ -495,204 +506,167 @@
             }
 
             .faq-wrapper .wrapper_toggle_button {
-                font-weight: 500; /* in b12 */
-            } 
+                font-weight: 500;
+                /* in b12 */
+            }
         }
     </style>
-    
     <!-- description -->
     <div class="wrapper full description-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>Description</span><p class="arrow-p"><i class="arrow up"></i></p>
+        <div class="wrapper_toggle_button"><span>Description</span>
+            <p class="arrow-p">&nbsp;</p>
         </div>
-        <div class="wrapper-body">
-            <img class="description-img" src ="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/00012851_1.jpg?v=1674019219">
+        <div class="wrapper-body wrapper-body-closed"><iframe src="https://www.youtube.com/embed/jnKKDUsxC2M"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen=""></iframe>
             <ul class="wrapper-point_list">
-                <li><strong>Why Vitamin C:</strong> Synergistically blends with hyaluronic acid and Vitamin E to brighten complexion.</li>
-                <li><strong>When to use:</strong> This can be used during your day and night care routine. Apply 2 to 3 drops using a dropper to glide across your cheek and spread over the entire face gently. </li>
-                <li><strong>How it helps the skin:</strong>  How it helps the skin?: Highly potent Vitamin C + Hyaluronic acid + Vitamin E helps clear up your skin!</li>
-                <li><strong>What is in it:</strong> A perfect blend of Vitamin C, Moringa Oleifera Oil, Vitamin E, and Hyaluronic Acid, and Ashwagandha Extract help your skin stay youthful & glowing.</li>
-                <li><strong>Who can use it:</strong> Suits all skin types. Works well for sensitive, combination, dry & oily skin.
-                </li>
+                <li><strong>What are multivitamins?:</strong> Healthy functioning of a body is the sum total of several
+                    nutrients and processed within. Multivitamins, as the name suggests, are different vitamins vital
+                    for the healthy functioning of our body..</li>
+                <li><strong>Importance of Multivitamin with probiotics:</strong> Along with probiotics, multivitamins
+                    become easily absorbable. These multivitamin tablets fulfill nutritional deficiencies that cannot be
+                    fulfilled by your regular diet alone!</li>
+                <li><strong>45 Ingredients in 1 Tablet:</strong> Himalayan Organics Multivitamin with Probiotics has 45
+                    powerful ingredients in the form of 11 blends that help perfectly fulfill your vitamin intake while
+                    maintaining overall health in men &amp; women.</li>
+                <li><strong>Extremely powerful formula:</strong> TContains vital B-Vitamins, Vitamin A &amp; Folic Acid
+                    that provide daily essential vitamins needed for healthy eyes, hair, energy &amp; good nerve and
+                    blood cells. All-in-one nourishment!</li>
+                <li></li>
             </ul>
         </div>
     </div>
-    <!-- /description -->
-
-    <!-- benefits -->
+    <!-- /description --> <!-- benefits -->
     <div class="wrapper full benefits-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
+        <div class="wrapper_toggle_button"><span>Benefits</span>
+            <p class="arrow-p">&nbsp;</p>
         </div>
-        <div class="wrapper-body">
+        <div class="wrapper-body wrapper-body-closed">
             <div class="benefits-list">
                 <div class="benefit-box">
-                    <div class="benefit-box-right-pane">
-                        <strong>NOURISHED SKIN</strong>
-                        <span>Works on the surface & deeper inside to promote youthful skin. </span>
-                    </div>
+                    <div class="benefit-box-left-pane"><img
+                            src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/multivitamin_with_probiotics_GLOWING_SKIN.png?v=1675149867"
+                            alt=""></div>
+                    <div class="benefit-box-right-pane"><strong>GLOWING SKIN, HAPPY HAIR:</strong> <span>With Biotin,
+                            Vitamin E &amp; Vitamin C.</span></div>
                 </div>
                 <div class="benefit-box">
-                    <div class="benefit-box-right-pane">
-                        <strong>BRIGHT COMPLEXION</strong>
-                        <span>The antioxidants in the serum help regulate overproduction of melanin. </span>
-                    </div>
+                    <div class="benefit-box-left-pane"><img
+                            src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/multivitamin_with_probiotics_STRONG_BONES.png?v=1675149867"
+                            alt=""></div>
+                    <div class="benefit-box-right-pane"><strong>STRONG BONES, HEALTHY JOINTS:</strong> <span>With
+                            Calcium, Magnesium, Potassium &amp; Vitamin D.</span></div>
                 </div>
                 <div class="benefit-box">
-                    <div class="benefit-box-right-pane">
-                        <strong>BLEMISH-FREE SKIN</strong>
-                        <span>The strong healing power of the serum reduces discoloration and redness.</span>
-                    </div>
+                    <div class="benefit-box-left-pane"><img
+                            src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/multivitamin_with_probiotics_ENERGY_RECHARGE.png?v=1675149867"
+                            alt=""></div>
+                    <div class="benefit-box-right-pane"><strong>YOUR DAILY ENERGY RECHARGE:</strong> <span>Naturally
+                            powerful blends for high energy &amp; stamina.</span></div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /benefits -->
-
-    <!-- key ingredients -->
+    <!-- /benefits --> <!-- key ingredients -->
     <div class="wrapper full ingredients-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>Key Ingredients</span><p class="arrow-p"><i class="arrow up"></i></p>
+        <div class="wrapper_toggle_button"><span>Key Ingredients</span>
+            <p class="arrow-p">&nbsp;</p>
         </div>
-        <div class="wrapper-body">
+        <div class="wrapper-body wrapper-body-closed">
             <div class="ingredients-table">
-
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/aloe_vera.png?v=1673603453);"></div>
-                        <p>
-                            <strong>Aloe Vera Leaf Extract - </strong>Inhibits the production of free radicals and prevents excess melanin for even tone and blemish-free skin.
-                        </p>
+                        <div class="ingredient-image"
+                            style="background-image: url('https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Zinc_Iron_Manganese.png?v=1675150454');">
+                        </div>
+                        <p><strong>Essential Mineral Blend: </strong>Zinc, Iron, Manganese, Copper, Iodine, Boron,
+                            Chromium &amp; Molybdenum helps maintain cell metabolism &amp; cardiovascular health.</p>
                     </div>
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/liquorice_extract.png?v=1673603454);"></div>
-                        <p>
-                            <strong>Liquorice Extract - </strong>Inhibits the production of free radicals and prevents excess melanin for even tone and blemish-free skin.
-                        </p>
+                        <div class="ingredient-image"
+                            style="background-image: url('https://cdn.shopify.com/s/files/1/0321/0264/5895/files/alfalfa.png?v=1675150454');">
+                        </div>
+                        <p><strong>Bone &amp; Joint Blend:</strong>The combination of Calcium, Magnesium, Vitamin K2, D,
+                            Cissus Quadrangularis, Alfalfa &amp; Phosphorus promote healthy bones &amp; joints.</p>
                     </div>
                 </div>
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/gotu_kola.png?v=1673603454);"></div>
-                        <p>
-                            <strong>Gotu Kola Extract - </strong>Loaded with healing properties, it inhibits sagging skin, promotes new skin cell production, and enhances the skin’s resilience.
-                        </p>
-                    </div>
-                    <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Niacinamide.png?v=1673603453);"></div>
-                        <p>
-                            <strong>Niacinamide (Vitamin B3) - </strong>Safeguards skin from oxidative and environmental stress along with easing inflammatory skin issues for naturally glowing skin.
-                        </p>
-                    </div>
-                </div>
-            </table>
-        </div>
-    </div></div>
-    <!-- /key ingredients -->
-    
-    <!-- how to use -->
-    <div class="wrapper full how-to-use-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>How to use?</span><p class="arrow-p"><i class="arrow up"></i></p>
-        </div>
-        <div class="wrapper-body">
-            <div class="how-to-use-body">
-                <div class="how-to-use-steps">
-                    <div class="how-to-use-box">
-                        <div class="how-to-use-index">1</div>
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-01.png?v=1673603517" alt="">
-                        <p>Wash your face & let it dry. </p>
-                    </div>
-                    <div class="how-to-use-box">
-                        <div class="how-to-use-index">2</div>
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-02.png?v=1673603518" alt="">
-                        <p>Put 2 to 3 drops directly over the face.</p>
-                    </div>
-                    <div class="how-to-use-box">
-                        <div class="how-to-use-index">3</div>
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vitamin_C_Serum-03.png?v=1673603518" alt="">
-                        <p>Spread over the entire face gently.</p>
-                    </div>
-                    <div class="navigation-button-wrapper">
-                        <button class="navigation-button left-move-arrow"><i class="bi bi-arrow-left-circle-fill"></i></button>
-                        <button class="navigation-button right-move-arrow"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                        <div class="ingredient-image"
+                            style="background-image: url('https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Grapeseed.png?v=1675150454');">
+                        </div>
+                        <p><strong>Super Antioxidant Blend:</strong>Grapeseed, Lutein, Lycopene &amp; Selenium are the
+                            powerhouse of antioxidants that neutralize free radicals in the body.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /how to use -->
-    
-    <!-- FAQs -->
+
+    <!-- /key ingredients --> <!-- FAQs -->
     <h2 class="faqs">FAQs</h2>
     <div class="wrapper description-wrapper faq-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>What is a suitable moisturizer to apply after Vitamin C serum?</span>
+        <div class="wrapper_toggle_button"><span>Is it good to improve digestive health too?</span>
             <p class="arrow-p"><i class="arrow up"></i></p>
-        </div>
-        <div class="wrapper-body faq-answer">
-            Himalayan Organics Vitamin C Day Cream is ideal for moisturising after applying Himalayan Organics Vitamin C Serum.
-        </div>
-    </div>
-    <div class="wrapper description-wrapper faq-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>What is the type of vitamin c in this serum?</span><p class="arrow-p"><i class="arrow up"></i></p>
-        </div>
-        <div class="wrapper-body faq-answer">
-            Himalayan Organics vitamin C serum comes with the most stable form of vitamin C, which is ascorbic acid.
-        </div>
-    </div>
-    <div class="wrapper description-wrapper faq-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>Is the serum only suitable for night care routine?</span><p class="arrow-p"><i class="arrow up"></i></p>
-        </div>
-        <div class="wrapper-body faq-answer">
-            This can be applied on a washed and cleansed face during the day as well & in the nighttime too, before the day cream for the best results.
-        </div>
-    </div>
-    <div class="wrapper description-wrapper faq-wrapper">
-        <div class="wrapper_toggle_button">
-            <span> Does this help reduce hyperpigmentation?</span><p class="arrow-p"><i class="arrow up"></i></p>
-        </div>
-        <div class="wrapper-body faq-answer">
-            Yes, Himalayan Organics vitamin C serum comes with a quick absorption formula for deeper penetration to reduce dark spots.
-        </div>
-    </div>
-    <div class="wrapper description-wrapper faq-wrapper">
-        <div class="wrapper_toggle_button">
-            <span>Is this suitable for oily skin?</span><p class="arrow-p"><i class="arrow up"></i></p>
-        </div>
-        <div class="wrapper-body faq-answer">
-            Yes, it is suitable for all skin types.
-        </div>
-    </div>
-    <!-- /FAQs -->
 
-    <!-- USPs -->
+        </div>
+        <div class="wrapper-body faq-answer">- Yes. Multivitamin with probiotics helps improve gut health and
+            digestion simultaneously.</div>
+    </div>
+    <div class="wrapper description-wrapper faq-wrapper">
+        <div class="wrapper_toggle_button"><span>What are the benefits of this?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
+
+        </div>
+        <div class="wrapper-body faq-answer">This high potency multivitamin blend is beneficial for healthy hair,
+            skin, better muscle growth &amp; overall bone health. .</div>
+    </div>
+    <div class="wrapper description-wrapper faq-wrapper">
+        <div class="wrapper_toggle_button"><span>What makes it different?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
+
+        </div>
+        <div class="wrapper-body faq-answer">This is an advanced formula with 40+ nutrients in the form of 11
+            powerful blends that not only fulfill your daily multivitamin needs but also keep your overall digestion
+            good.</div>
+    </div>
+    <div class="wrapper description-wrapper faq-wrapper">
+        <div class="wrapper_toggle_button"><span>Why do you need multivitamins?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
+
+        </div>
+        <div class="wrapper-body faq-answer">Today's fast-paced lives &amp; impure foods can hardly fulfil your
+            daily required multivitamins. This multivitamin supplement provides essential vitamins, minerals &amp;
+            amino acids to keep you energetic throughout the day.</div>
+    </div>
+    <div class="wrapper description-wrapper faq-wrapper">
+        <div class="wrapper_toggle_button"><span>Is it safe to take?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
+
+        </div>
+        <div class="wrapper-body faq-answer">Yes. The best thing about this multivitamin is that it contains
+            naturally essential blends to boost overall energy levels &amp; metabolism.</div>
+    </div>
+    <!-- /FAQs --> <!-- USPs -->
     <div class="wrapper usp-wrapper">
-        <!-- <h3>YOUR DAILY CLEAN, GREEN, VEGAN NUTRITION</h3> -->
+        <h3>YOUR DAILY CLEAN, GREEN, VEGAN NUTRITION</h3>
         <div class="usp-items">
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Parabens.png?v=1673614423" alt="">
-                <span>No Paraben</span>
-            </div>
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Mineral_Oil.png?v=1673614423" alt="">
-                <span>No Mineral Oil</span>
-            </div>
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Cruelty-free.png?v=1673614423" alt="">
-                <span>Cruelty-free</span>
-            </div>
-            <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Women_made_women_powered.png?v=1673614423" alt="">
-                <span>Women made women powered</span>
-            </div>
+            <div class="usp-box"><img
+                    src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/multivitamin_with_probiotics_Non-GMO.png?v=1675149867"
+                    alt=""></div>
+            <div class="usp-box"><img
+                    src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/multivitamin_with_probiotics_Expert-approved.png?v=1675149867"
+                    alt=""></div>
+            <div class="usp-box"><img
+                    src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/multivitamin_with_probiotics_100_Vegetarian.png?v=1675149867"
+                    alt=""></div>
+            <div class="usp-box"><img
+                    src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/multivitamin_with_probiotics_Easy-to-swallow.png?v=1675149867"
+                    alt=""></div>
         </div>
     </div>
     <!-- /USPs -->
-
-
     <script>
         const buttons = document.querySelectorAll(".wrapper");
         buttons.forEach(element => {
@@ -701,16 +675,10 @@
             })
         });
 
-        const navigationButtons = document.querySelectorAll(".navigation-button");
-        navigationButtons[0].addEventListener('click', (e) => {
+        document.querySelectorAll(".wrapper-body").forEach(element => element.addEventListener("click", (e) => {
             e.stopPropagation();
-            document.querySelector(".how-to-use-steps").scrollLeft -= 500;
-        })
-
-        navigationButtons[1].addEventListener('click', (e) => {
-            e.stopPropagation();
-            document.querySelector(".how-to-use-steps").scrollLeft += 500;
-        })
+        }))
     </script>
 </body>
+
 </html>

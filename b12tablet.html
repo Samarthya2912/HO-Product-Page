@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himalayan Organics</title>
-    
+
 </head>
+
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");        
-        .wrapper, .description-wrapper {
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+        .wrapper,
+        .description-wrapper {
             max-width: 95vw;
             font-family: 'Poppins', sans-serif;
             margin: 10px 20px;
             --wrapper-toggle-button-color: #f8f8f8;
             --ingredient-card-color: #ECEDED;
         }
-        
+
         .wrapper_toggle_button {
             background-color: var(--wrapper-toggle-button-color);
         }
@@ -43,18 +47,18 @@
             list-style-type: square;
         }
 
-        .wrapper-point_list > li::marker {
+        .wrapper-point_list>li::marker {
             margin: 10px 0;
             content: "\25ba";
             color: #0c4304;
         }
 
-        .wrapper-point_list > * {
+        .wrapper-point_list>* {
             margin: 20px;
             padding: 0 20px
         }
 
-        
+
         .wrapper_toggle_button {
             display: flex;
             flex-direction: row;
@@ -71,19 +75,19 @@
             background-color: #f8f8f9;
         }
 
-        .wrapper > .wrapper-body {
+        .wrapper>.wrapper-body {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            transform: scaleY(0);    
+            transform: scaleY(0);
             transform-origin: top;
             transition: all 0.35s ease, padding 0s;
             max-height: 0;
         }
 
-        .description-wrapper > .wrapper-body {
+        .description-wrapper>.wrapper-body {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -95,7 +99,8 @@
         .description-wrapper img {
             width: 35vw;
         }
-        .wrapper.full > .wrapper-body {
+
+        .wrapper.full>.wrapper-body {
             transform: scaleY(1);
             max-height: 3000px;
         }
@@ -213,7 +218,7 @@
             width: 80vw;
             justify-content: center;
         }
-        
+
         .how-to-use-box {
             display: flex;
             align-items: center;
@@ -232,7 +237,7 @@
             width: 150px;
             text-align: center;
         }
-        
+
         .how-to-use-index {
             position: absolute;
             background-color: white;
@@ -275,7 +280,7 @@
 
         .usp-box img {
             width: 12vw;
-            border : none !important;
+            border: none !important;
         }
 
         .usp-wrapper {
@@ -311,7 +316,7 @@
             background: none;
             border: none;
         }
-        
+
         .navigation-button-wrapper i {
             cursor: pointer;
             font-size: 30px;
@@ -322,12 +327,16 @@
         }
 
         .how-to-use-steps {
-            -ms-overflow-style: none;  /* Internet Explorer 10+ */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
+            scrollbar-width: none;
+            /* Firefox */
         }
-        .how-to-use-steps::-webkit-scrollbar { 
-            display: none;  /* Safari and Chrome */
-        }   
+
+        .how-to-use-steps::-webkit-scrollbar {
+            display: none;
+            /* Safari and Chrome */
+        }
 
         .description-wrapper .wrapper-point_list {
             width: 60%;
@@ -346,8 +355,9 @@
         @media screen and (max-width: 850px) {
             .navigation-button-wrapper {
                 display: none
-                /* max-width: 100%; */
+                    /* max-width: 100%; */
             }
+
             .description-wrapper .wrapper-body {
                 display: flex;
                 flex-direction: column;
@@ -358,20 +368,22 @@
                 padding-inline-start: 0;
             }
 
-            .wrapper, .description-wrapper {
+            .wrapper,
+            .description-wrapper {
                 position: relative;
                 margin: auto;
                 margin-top: 10px;
             }
 
-            .wrapper, .description-wrapper {
+            .wrapper,
+            .description-wrapper {
                 font-size: 14px;
             }
 
             .description-wrapper .wrapper-body img {
                 width: 80vw;
             }
-            
+
             .ingredient-table {
                 width: 100%;
             }
@@ -379,7 +391,7 @@
             .ingredients-table-row {
                 flex-direction: column;
             }
-            
+
             .ingredient-box {
                 display: flex;
                 flex-direction: column;
@@ -476,7 +488,7 @@
                 height: 200px;
             }
 
-            .description-wrapper  .wrapper-point_list {
+            .description-wrapper .wrapper-point_list {
                 width: 100%;
             }
 
@@ -495,23 +507,32 @@
             }
 
             .faq-wrapper .wrapper_toggle_button {
-                font-weight: 500; /* in b12 */
-            } 
+                font-weight: 500;
+                /* in b12 */
+            }
         }
     </style>
     <!-- description -->
     <div class="wrapper full description-wrapper">
         <div class="wrapper_toggle_button">
-            <span>Description</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>Description</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body wrapper-body-closed">
-            <iframe src="https://www.youtube.com/embed/jnKKDUsxC2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jnKKDUsxC2M" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
             <ul class="wrapper-point_list">
-                <li><strong>Importance of Vitamin B12:</strong> Your body needs Vitamin B12 for normal functioning of nerve cells, red blood cells formulation, DNA synthesis & improving memory.</li>
-                <li><strong>What's in the capsule:</strong> Contains plant-based sources of B12 such as Stevia Leaves, Alfalfa Leaves, Moringa, Wheatgrass, Beetroot.</li>
-                <li><strong>How many capsules in 1 pack:</strong> It contains 120 vegan and gluten-free capsules for your healthy metabolism and superior nerve health.</li>
-                <li><strong>Who can take:</strong> These plant-based capsules can be taken by both men & women for managing daily B12 deficiency. </li>
-                <li><strong>How to Use: </strong>For holistic nutrition, Take 2 capsules daily, preferably one each, after lunch and dinner, or as prescribed by your healthcare professional.</li>
+                <li><strong>Importance of Vitamin B12:</strong> Your body needs Vitamin B12 for normal functioning of
+                    nerve cells, red blood cells formulation, DNA synthesis & improving memory.</li>
+                <li><strong>What's in the capsule:</strong> Contains plant-based sources of B12 such as Stevia Leaves,
+                    Alfalfa Leaves, Moringa, Wheatgrass, Beetroot.</li>
+                <li><strong>How many capsules in 1 pack:</strong> It contains 120 vegan and gluten-free capsules for
+                    your healthy metabolism and superior nerve health.</li>
+                <li><strong>Who can take:</strong> These plant-based capsules can be taken by both men & women for
+                    managing daily B12 deficiency. </li>
+                <li><strong>How to Use: </strong>For holistic nutrition, Take 2 capsules daily, preferably one each,
+                    after lunch and dinner, or as prescribed by your healthcare professional.</li>
             </ul>
         </div>
     </div>
@@ -520,13 +541,15 @@
     <!-- benefits -->
     <div class="wrapper full benefits-wrapper">
         <div class="wrapper_toggle_button">
-            <span>Benefits</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>Benefits</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body wrapper-body-closed">
             <div class="benefits-list">
                 <div class="benefit-box">
                     <div class="benefit-box-left-pane">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/immunity_1.png?v=1674413063" alt="">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/immunity_1.png?v=1674413063"
+                            alt="">
                     </div>
                     <div class="benefit-box-right-pane">
                         <strong>SUPER STRONG IMMUNITY:</strong>
@@ -535,7 +558,8 @@
                 </div>
                 <div class="benefit-box">
                     <div class="benefit-box-left-pane">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/immunity_1.png?v=1674413063" alt="">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/immunity_1.png?v=1674413063"
+                            alt="">
                     </div>
                     <div class="benefit-box-right-pane">
                         <strong>ANTIOXIDANT RICH:</strong>
@@ -544,7 +568,8 @@
                 </div>
                 <div class="benefit-box">
                     <div class="benefit-box-left-pane">
-                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/nerve_system.png?v=1674413080" alt="">
+                        <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/nerve_system.png?v=1674413080"
+                            alt="">
                     </div>
                     <div class="benefit-box-right-pane">
                         <strong>NERVE HEALTH:</strong>
@@ -559,44 +584,59 @@
     <!-- key ingredients -->
     <div class="wrapper full ingredients-wrapper">
         <div class="wrapper_toggle_button">
-            <span>Key Ingredients</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>Key Ingredients</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body wrapper-body-closed">
             <div class="ingredients-table">
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Beetroot_1.jpg?v=1673350566);"></div>
+                        <div class="ingredient-image"
+                            style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Beetroot_1.jpg?v=1673350566);">
+                        </div>
                         <p>
-                            <strong>Beetroot - </strong>Rich in essential nutrients and low in calories, beetroot helps manage blood pressure, improve athletic performance, and boost digestive health.
+                            <strong>Beetroot - </strong>Rich in essential nutrients and low in calories, beetroot helps
+                            manage blood pressure, improve athletic performance, and boost digestive health.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Moringa_2.jpg?v=1673350566);"></div>
+                        <div class="ingredient-image"
+                            style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Moringa_2.jpg?v=1673350566);">
+                        </div>
                         <p>
-                            <strong>Moringa - </strong>Packed with antioxidants and bioactive compounds, Moringa regulates blood sugar levels, manages inflammation, combats free radicals, and boosts immunity.
+                            <strong>Moringa - </strong>Packed with antioxidants and bioactive compounds, Moringa
+                            regulates blood sugar levels, manages inflammation, combats free radicals, and boosts
+                            immunity.
                         </p>
                     </div>
                 </div>
                 <div class="ingredients-table-row">
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Wheatgrass_3.jpg?v=1673350566);"></div>
+                        <div class="ingredient-image"
+                            style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Wheatgrass_3.jpg?v=1673350566);">
+                        </div>
                         <p>
-                            <strong>Wheatgrass - </strong>A superfood, wheatgrass helps eliminate toxins, improves digestion, and boosts your metabolism.
+                            <strong>Wheatgrass - </strong>A superfood, wheatgrass helps eliminate toxins, improves
+                            digestion, and boosts your metabolism.
                         </p>
                     </div>
                     <div class="ingredient-box">
-                        <div class="ingredient-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Green_Amla.jpg?v=1673350566);"></div>
+                        <div class="ingredient-image"
+                            style="background-image:url(https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Green_Amla.jpg?v=1673350566);">
+                        </div>
                         <p>
-                            <strong>Green Amla - </strong>Rich in antioxidants, Amla improves immunity, fastens metabolism, detoxifies the body, and supports digestive health.
+                            <strong>Green Amla - </strong>Rich in antioxidants, Amla improves immunity, fastens
+                            metabolism, detoxifies the body, and supports digestive health.
                         </p>
                     </div>
                 </div>
                 <div class="ingredients-table-row">
-                    
+
                 </div>
-            </table>
+                </table>
+            </div>
         </div>
-    </div></div>
+    </div>
     <!-- /key ingredients -->
 
 
@@ -604,15 +644,18 @@
     <h2 class="faqs">FAQs</h2>
     <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
-            <span>This product contains corn flour or is gluten-free?</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>This product contains corn flour or is gluten-free?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body faq-answer">
             It is 100% organic and gluten-free!
         </div>
     </div>
+
     <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
-            <span>If this product is derived from plants, how is it rich in b12?</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>If this product is derived from plants, how is it rich in b12?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body faq-answer">
             It has Moringa leaves, Wheatgrass, Alfalfa leaves powder in it that are loaded with multivitamins.
@@ -620,7 +663,8 @@
     </div>
     <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
-            <span>What are the Symptoms of B12 Deficiency?</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>What are the Symptoms of B12 Deficiency?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body faq-answer">
             Symptoms of vitamin B12 deficiency are fairly non-specific, and can include
@@ -630,7 +674,8 @@
     </div>
     <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
-            <span>What Happens if B12 Deficiency is Overlooked or Ignored?</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>What Happens if B12 Deficiency is Overlooked or Ignored?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body faq-answer">
             Because vitamin B12 helps in the formation of nucleotides (genetic material), a
@@ -640,7 +685,8 @@
     </div>
     <div class="wrapper description-wrapper faq-wrapper">
         <div class="wrapper_toggle_button">
-            <span>Are animal foods a good source of Vitamin B12?</span><p class="arrow-p"><i class="arrow up"></i></p>
+            <span>Are animal foods a good source of Vitamin B12?</span>
+            <p class="arrow-p"><i class="arrow up"></i></p>
         </div>
         <div class="wrapper-body faq-answer">
             No
@@ -656,13 +702,16 @@
                 <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/Vegetarian.png?v=1673351539" alt="">
             </div>
             <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Harsh_Chemicals.png?v=1673351965" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_No_Harsh_Chemicals.png?v=1673351965"
+                    alt="">
             </div>
             <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Expert-approved.png?v=1673351998" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Expert-approved.png?v=1673351998"
+                    alt="">
             </div>
             <div class="usp-box">
-                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Non-GMO.png?v=1673351998" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0321/0264/5895/files/web_svg_icon_Non-GMO.png?v=1673351998"
+                    alt="">
             </div>
         </div>
     </div>
@@ -680,4 +729,5 @@
         }))
     </script>
 </body>
+
 </html>
